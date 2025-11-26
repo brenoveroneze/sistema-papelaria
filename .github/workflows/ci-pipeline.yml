@@ -1,0 +1,33 @@
+name: TCC Quality Pipeline
+
+on:
+  # Gatilho 1: Roda quando faz push na main
+  push:
+    branches: [ "main" ]
+  # Gatilho 2: Adiciona um botão "Run Workflow" para você rodar manualmente se quiser
+  workflow_dispatch:
+
+jobs:
+  quality-check:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Instalar Dependências
+        run: npm install
+
+      - name: Executar Testes Unitários (Jest)
+        run: npm test
+
+      - name: Analisar Qualidade (SonarQube)
+        env:
+          SONAR_LOGIN: ${{ secrets.SONAR_LOGIN }}
+          SONAR_PASSWORD: ${{ secrets.SONAR_PASSWORD }}
+        run: npm run sonar -- -Dsonar.qualitygate.wait=true
