@@ -1,12 +1,12 @@
 const scanner = require('sonarqube-scanner');
 
-// Correção: Agora chamamos o método .scan() explicitamente
 scanner.scan(
   {
     serverUrl: 'http://localhost:9000',
     options: {
-      'sonar.login': 'admin', // Se já mudou a senha no navegador, use a nova aqui
-      'sonar.password': '@Bre26092000', // Senha padrão ou a nova
+      // Agora ele pega das variáveis de ambiente do sistema
+      'sonar.login': process.env.SONAR_LOGIN,
+      'sonar.password': process.env.SONAR_PASSWORD,
     },
   },
   () => process.exit()
