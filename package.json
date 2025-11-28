@@ -1,12 +1,12 @@
 {
-  "name": "credit-risk-engine",
+  "name": "sistema-papelaria",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "test": "jest --coverage",
-  "lint": "eslint .",
-  "sonar": "node sonar-scan.js"
-},
+    "test": "jest --coverage",
+    "lint": "eslint .",
+    "sonar": "node sonar-scan.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,5 +18,8 @@
     "jest": "^30.2.0",
     "prettier": "^3.6.2",
     "sonarqube-scanner": "^4.3.2"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
   }
 }
