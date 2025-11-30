@@ -1,20 +1,24 @@
+const path = require('path');
+
 module.exports = {
   testEnvironment: 'node',
+  
+  roots: [
+    "<rootDir>/tests"
+  ],
 
-  // PROCURA: Qualquer arquivo que termine com .test.js em qualquer pasta
-  testMatch: ['**/*.test.js'],
+  testMatch: [
+    "**/*.test.js"
+  ],
 
-  // IGNORA: Proíbe entrar nestas pastas (Resolve o erro do Runner e do GitHub)
+  // Removemos 'actions-runner' daqui para não bloquear o projeto todo
   testPathIgnorePatterns: [
-    "/node_modules/",
-    "/actions-runner/", // A pasta do seu runner
-    "/.github/",        // A pasta do pipeline
-    "/coverage/"
+    "/node_modules/"
   ],
 
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
     'src/**/*.js',
     '!src/server.js'
-  ],
+  ]
 };
