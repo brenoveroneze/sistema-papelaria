@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest tests --coverage",
+    "test": "jest --coverage",
+    "start": "node src/server.js",
     "lint": "eslint .",
     "sonar": "node sonar-scan.js",
     "full-check": "npm test && npm run sonar"
