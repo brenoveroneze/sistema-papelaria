@@ -22,7 +22,7 @@ async function runReview() {
 
     // 2. Preparar o Gemini
     const genAI = new GoogleGenerativeAI(API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
     // 3. Criar o Prompt (O comando para a IA)
     const prompt = `
