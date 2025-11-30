@@ -1,0 +1,4093 @@
+[2025-11-30 22:48:08Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.credentials'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known config file 'Runner': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.runner'
+[2025-11-30 22:48:08Z INFO Worker] Version: 2.329.0
+[2025-11-30 22:48:08Z INFO Worker] Commit: c76c59996c8fa32e989164a5a695efb12608ae5a
+[2025-11-30 22:48:08Z INFO Worker] Culture: pt-BR
+[2025-11-30 22:48:08Z INFO Worker] UI Culture: pt-BR
+[2025-11-30 22:48:08Z INFO Worker] Waiting to receive the job message from the channel.
+[2025-11-30 22:48:08Z INFO ProcessChannel] Receiving message of length 22309, with hash '62846f32dd86cc08f8630eabe4da5ae3f01cea8b98862b301da6364dcd51933a'
+[2025-11-30 22:48:08Z INFO Worker] Message received.
+[2025-11-30 22:48:08Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/ci-pipeline.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v3",
+        "repositoryType": "GitHub"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 15,
+        "col": 15,
+        "lit": "Checkout do Código"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "e69ae867-9391-43e2-bf02-7f137c5ca388",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-node",
+        "ref": "v3",
+        "repositoryType": "GitHub"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 18,
+        "col": 15,
+        "lit": "Setup Node.js"
+      },
+      "contextName": "__actions_setup-node",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 21,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 21,
+              "col": 11,
+              "lit": "node-version"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 21,
+              "col": 25,
+              "lit": "20"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "573b2d36-9d05-4d91-b9e4-a01840cc6f41",
+      "name": "__actions_setup-node"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 23,
+        "col": 15,
+        "lit": "Instalar Dependências"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 24,
+              "col": 14,
+              "lit": "npm install"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "8cf8b9a3-f816-4f71-8f6b-812d1bfa1c0a",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 26,
+        "col": 15,
+        "lit": "Executar Testes Unitários (Jest)"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 27,
+              "col": 14,
+              "lit": "npm test"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "f4fe59fe-c246-4702-9dd9-7c55d45f149d",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 29,
+        "col": 15,
+        "lit": "Analisar Qualidade (SonarQube)"
+      },
+      "contextName": "__run_3",
+      "environment": {
+        "type": 2,
+        "file": 1,
+        "line": 31,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 31,
+              "col": 11,
+              "lit": "SONAR_LOGIN"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 31,
+              "col": 24,
+              "expr": "secrets.SONAR_LOGIN"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 32,
+              "col": 11,
+              "lit": "SONAR_PASSWORD"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 32,
+              "col": 27,
+              "expr": "secrets.SONAR_PASSWORD"
+            }
+          }
+        ]
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 33,
+              "col": 14,
+              "lit": "npm run sonar -- -Dsonar.qualitygate.wait=true"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "68268c1d-3f84-4d82-af0f-7d8f0f71653d",
+      "name": "__run_3"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 36,
+        "col": 15,
+        "lit": "Instalar Dependência do Gemini"
+      },
+      "contextName": "__run_4",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 37,
+              "col": 14,
+              "lit": "npm install dotenv"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "cf6ec428-13f3-41ff-8084-759f74763452",
+      "name": "__run_4"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 39,
+        "col": 15,
+        "lit": "Consultoria de IA (Gemini)"
+      },
+      "contextName": "__run_5",
+      "environment": {
+        "type": 2,
+        "file": 1,
+        "line": 41,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 41,
+              "col": 11,
+              "lit": "GEMINI_API_KEY"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 41,
+              "col": 27,
+              "expr": "secrets.GEMINI_API_KEY"
+            }
+          }
+        ]
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 42,
+              "col": 14,
+              "lit": "node ai-review.js"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "continueOnError": {
+        "type": 5,
+        "file": 1,
+        "line": 43,
+        "col": 28,
+        "bool": true
+      },
+      "id": "79fd91e9-3264-47cb-872b-aee217326649",
+      "name": "__run_5"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "GEMINI_API_KEY": {
+      "value": "***",
+      "isSecret": true
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "SONAR_LOGIN": {
+      "value": "***",
+      "isSecret": true
+    },
+    "SONAR_PASSWORD": {
+      "value": "***",
+      "isSecret": true
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "true"
+    },
+    "actions_container_action_runner_temp": {
+      "value": "true"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "true"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "quality-check"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "984ccd4b-966f-4dd5-a642-6a75d469f53a.quality-check.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "quality-check"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "984ccd4b-966f-4dd5-a642-6a75d469f53a",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "984ccd4b-966f-4dd5-a642-6a75d469f53a",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "0c6e07b7-22af-5116-96c8-431b8da40a03",
+  "jobDisplayName": "quality-check",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/qegPUPmeLhp26835BeH2fAE177RMxEkizJV2z1gXKTxFyi3lvN/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus4.actions.githubusercontent.com/qegPUPmeLhp26835BeH2fAE177RMxEkizJV2z1gXKTxFyi3lvN/",
+          "GenerateIdTokenUrl": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-3-azure-eastus.actions.githubusercontent.com/183/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "8ba58230f8a509adf18f2c323c3a0d55540632d4"
+        },
+        {
+          "k": "repository",
+          "v": "brenoveroneze/sistema-papelaria"
+        },
+        {
+          "k": "repository_owner",
+          "v": "brenoveroneze"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "20001188"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/brenoveroneze/sistema-papelaria.git"
+        },
+        {
+          "k": "run_id",
+          "v": "19806013252"
+        },
+        {
+          "k": "run_number",
+          "v": "10"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "private"
+        },
+        {
+          "k": "actor_id",
+          "v": "20001188"
+        },
+        {
+          "k": "actor",
+          "v": "brenoveroneze"
+        },
+        {
+          "k": "workflow",
+          "v": "TCC Quality Pipeline"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "8ba58230f8a509adf18f2c323c3a0d55540632d4"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "d8e1fa4c79e68fdb80c7c74e3cf7ab683eea22c7"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "oliveirabreno.veroneze@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Breno Veroneze"
+                              },
+                              {
+                                "k": "username",
+                                "v": "brenoveroneze"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "oliveirabreno.veroneze@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Breno Veroneze"
+                              },
+                              {
+                                "k": "username",
+                                "v": "brenoveroneze"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "8ba58230f8a509adf18f2c323c3a0d55540632d4"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Adiciona jest.config.js para ignorar pasta do runner"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2025-11-30T19:47:32-03:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "8f5ad69d216d6a62b8f076b3a5be67667b86494e"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/brenoveroneze/sistema-papelaria/commit/8ba58230f8a509adf18f2c323c3a0d55540632d4"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/brenoveroneze/sistema-papelaria/compare/d8e1fa4c79e6...8ba58230f8a5"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "oliveirabreno.veroneze@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Breno Veroneze"
+                          },
+                          {
+                            "k": "username",
+                            "v": "brenoveroneze"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "oliveirabreno.veroneze@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Breno Veroneze"
+                          },
+                          {
+                            "k": "username",
+                            "v": "brenoveroneze"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "8ba58230f8a509adf18f2c323c3a0d55540632d4"
+                    },
+                    {
+                      "k": "message",
+                      "v": "Adiciona jest.config.js para ignorar pasta do runner"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2025-11-30T19:47:32-03:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "8f5ad69d216d6a62b8f076b3a5be67667b86494e"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/brenoveroneze/sistema-papelaria/commit/8ba58230f8a509adf18f2c323c3a0d55540632d4"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "oliveirabreno.veroneze@gmail.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "brenoveroneze"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/brenoveroneze/sistema-papelaria.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1764116136.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "brenoveroneze/sistema-papelaria"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/brenoveroneze/sistema-papelaria.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/brenoveroneze/sistema-papelaria"
+                    },
+                    {
+                      "k": "id",
+                      "v": 1104239255.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "TypeScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "sistema-papelaria"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOQdFalw"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/20001188?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "oliveirabreno.veroneze@gmail.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/brenoveroneze/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/brenoveroneze/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/brenoveroneze/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/brenoveroneze/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/brenoveroneze"
+                          },
+                          {
+                            "k": "id",
+                            "v": 20001188.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "brenoveroneze"
+                          },
+                          {
+                            "k": "name",
+                            "v": "brenoveroneze"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjIwMDAxMTg4"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/brenoveroneze/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/brenoveroneze/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/brenoveroneze/repos"
+                          },
+                          {
+                            "k": "site_***",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/brenoveroneze/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/brenoveroneze/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/brenoveroneze"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": true
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1764542859.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 193592.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:brenoveroneze/sistema-papelaria.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/brenoveroneze/sistema-papelaria"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2025-11-30T22:44:17Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/brenoveroneze/sistema-papelaria"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "private"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/20001188?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/brenoveroneze/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/brenoveroneze/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/brenoveroneze/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/brenoveroneze/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/brenoveroneze"
+                    },
+                    {
+                      "k": "id",
+                      "v": 20001188.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "brenoveroneze"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjIwMDAxMTg4"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/brenoveroneze/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/brenoveroneze/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/brenoveroneze/repos"
+                    },
+                    {
+                      "k": "site_***",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/brenoveroneze/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/brenoveroneze/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/brenoveroneze"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "brenoveroneze/sistema-papelaria/.github/workflows/ci-pipeline.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "8ba58230f8a509adf18f2c323c3a0d55540632d4"
+        },
+        {
+          "k": "repository_id",
+          "v": "1104239255"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "brenoveroneze"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "job": {
+      "t": 2,
+      "d": [
+        {
+          "k": "check_run_id",
+          "v": 56740239924.0
+        }
+      ]
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDOATExpA"
+}
+[2025-11-30 22:48:08Z INFO JobRunner] Job ID 0c6e07b7-22af-5116-96c8-431b8da40a03
+[2025-11-30 22:48:08Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin\Runner.Worker.dll
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO ConfigurationStore] binPath: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO ConfigurationStore] RootFolder: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known config file 'Runner': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.runner'
+[2025-11-30 22:48:08Z INFO ConfigurationStore] ConfigFilePath: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.runner
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.runner_migrated'
+[2025-11-30 22:48:08Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.runner_migrated
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.credentials'
+[2025-11-30 22:48:08Z INFO ConfigurationStore] CredFilePath: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.credentials
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.credentials_migrated'
+[2025-11-30 22:48:08Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.credentials_migrated
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known config file 'Service': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.service'
+[2025-11-30 22:48:08Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.service
+[2025-11-30 22:48:08Z INFO ConfigurationStore] Read setting file: 406 chars
+[2025-11-30 22:48:08Z INFO JobRunner] Initializing launch client
+[2025-11-30 22:48:08Z INFO JobServerQueue] Initializing results client
+[2025-11-30 22:48:08Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2025-11-30 22:48:08Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2025-11-30 22:48:08Z INFO JobServerQueue] Start process web console line queue.
+[2025-11-30 22:48:08Z INFO JobServerQueue] Start process file upload queue.
+[2025-11-30 22:48:08Z INFO JobServerQueue] Start results file upload queue.
+[2025-11-30 22:48:08Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-11-30 22:48:08Z INFO JobServerQueue] Start process timeline update queue.
+[2025-11-30 22:48:08Z INFO ExecutionContext] Initializing Job context
+[2025-11-30 22:48:08Z INFO ExecutionContext] Initialize GitHub context
+[2025-11-30 22:48:08Z INFO ExecutionContext] Initialize Env context
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:08Z INFO JobRunner] Starting the job execution context.
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:08Z INFO JobRunner] Validating directory permissions for: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Tools': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_tool'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:08Z INFO JobRunner] Getting job extension.
+[2025-11-30 22:48:08Z INFO JobRunner] Initialize job. Getting all job steps.
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.credentials'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\.setup_info'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:08Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_PipelineMapping\brenoveroneze/sistema-papelaria\PipelineFolder.json
+[2025-11-30 22:48:08Z INFO PipelineDirectoryManager] Updating job run properties.
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:08Z INFO JobExtension] Downloading actions
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:08Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:09Z INFO Worker] Listening for cancel message from the channel.
+[2025-11-30 22:48:09Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2025-11-30 22:48:09Z INFO ResultServer] Successfully started websocket client.
+[2025-11-30 22:48:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd351d7b9-34ad-4507-9cb5-b24c58bc3f43', success rate: 1/1.
+[2025-11-30 22:48:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:09Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:09Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:09Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:09Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:09Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/f43a0e5ff2bd294095638e18286ca9a3d1956744' into C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\_temp_0059d005-d5ae-42a2-aae8-87b7b163882f\40946b57-daea-4029-8ed7-5ef53a97a3c5.zip.
+[2025-11-30 22:48:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd351d7b9-34ad-4507-9cb5-b24c58bc3f43', success rate: 1/1.
+[2025-11-30 22:48:09Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2025-11-30 22:48:10Z INFO ActionManager] Request URL: https://api.github.com/repos/actions/checkout/zipball/f43a0e5ff2bd294095638e18286ca9a3d1956744 X-GitHub-Request-Id: DD82:52856:150940:45EABD:692CC9AA Http Status: OK
+[2025-11-30 22:48:10Z INFO ActionManager] Finished getting action repository.
+[2025-11-30 22:48:10Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:10Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:10Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:10Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:10Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:10Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:10Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:10Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:10Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/setup-node/zipball/3235b876344d2a9aa001b8d1453c930bba69e610' into C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\_temp_776b466f-317b-4ebf-92e0-9dc7438af375\b1256e0e-1a90-4f83-9f0d-be73d910039a.zip.
+[2025-11-30 22:48:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd351d7b9-34ad-4507-9cb5-b24c58bc3f43', success rate: 1/1.
+[2025-11-30 22:48:10Z INFO ActionManager] Request URL: https://api.github.com/repos/actions/setup-node/zipball/3235b876344d2a9aa001b8d1453c930bba69e610 X-GitHub-Request-Id: DD84:3604D6:14B10F:4592F4:692CC9AB Http Status: OK
+[2025-11-30 22:48:11Z INFO ActionManager] Finished getting action repository.
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-11-30 22:48:11Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO ActionManager] Load action that reference repository from 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\actions\checkout\v3'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-11-30 22:48:11Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-11-30 22:48:11Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-11-30 22:48:11Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Ignore action property author.
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "node-version-file"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 23,
+          "col": 14,
+          "expr": "github.server_url == 'https://github.com' && github.token || ''"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 24,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 26,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-11-30 22:48:11Z INFO ActionManager] Action node.js file: dist/setup/index.js, no more preparation.
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO ActionManager] Load action that reference repository from 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\actions\setup-node\v3'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Ignore action property author.
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "node-version-file"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 23,
+          "col": 14,
+          "expr": "github.server_url == 'https://github.com' && github.token || ''"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 24,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 26,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-11-30 22:48:11Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-11-30 22:48:11Z INFO ActionManager] Action node.js file: dist/setup/index.js.
+[2025-11-30 22:48:11Z INFO ActionManager] Action post node.js file: dist/cache-save/index.js.
+[2025-11-30 22:48:11Z INFO JobExtension] Adding .
+[2025-11-30 22:48:11Z INFO JobExtension] Adding .
+[2025-11-30 22:48:11Z INFO JobExtension] Adding .
+[2025-11-30 22:48:11Z INFO JobExtension] Adding .
+[2025-11-30 22:48:11Z INFO JobExtension] Adding .
+[2025-11-30 22:48:11Z INFO JobExtension] Adding .
+[2025-11-30 22:48:11Z INFO JobExtension] Adding .
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO JobExtension] Total accessible running process: 300.
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO JobExtension] Start checking service connectivity in background.
+[2025-11-30 22:48:11Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "d351d7b9-34ad-4507-9cb5-b24c58bc3f43",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 3,
+  "startTime": "2025-11-30T22:48:08.9216948Z",
+  "finishTime": "2025-11-30T22:48:11.5800496Z"
+}.
+[2025-11-30 22:48:11Z INFO JobRunner] Total job steps: 7.
+[2025-11-30 22:48:11Z INFO JobRunner] Run all job steps.
+[2025-11-30 22:48:11Z INFO StepsRunner] Processing step: DisplayName='Checkout do Código'
+[2025-11-30 22:48:11Z INFO StepsRunner] Evaluating: success()
+[2025-11-30 22:48:11Z INFO StepsRunner] Result: true
+[2025-11-30 22:48:11Z INFO StepsRunner] Starting the step.
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO StepsRunner] Which2: 'chcp'
+[2025-11-30 22:48:11Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper] Process started with process id 23344, waiting for process exit.
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper] Finished process 23344 with exit code 0, and elapsed time 00:00:00.0094545.
+[2025-11-30 22:48:11Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO ActionManager] Load action that reference repository from 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\actions\checkout\v3'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-11-30 22:48:11Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-11-30 22:48:11Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-11-30 22:48:11Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-11-30 22:48:11Z INFO ExecutionContext] Reserve record order 9 to 16 for post job actions.
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:11Z INFO ExecutionContext] Write event payload to C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:11Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "brenoveroneze/sistema-papelaria"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "false"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "false"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:11Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-11-30 22:48:11Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command error
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command group
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-11-30 22:48:11Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:11Z INFO HostContext] Well known directory 'Externals': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals\node20\bin\node.exe'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\sistema-papelaria\sistema-papelaria'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:11Z INFO ProcessInvokerWrapper] Process started with process id 21960, waiting for process exit.
+[2025-11-30 22:48:11Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd351d7b9-34ad-4507-9cb5-b24c58bc3f43', success rate: 1/1.
+[2025-11-30 22:48:11Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:11Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2025-11-30 22:48:11Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-11-30 22:48:11Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\blocks\984ccd4b-966f-4dd5-a642-6a75d469f53a_d351d7b9-34ad-4507-9cb5-b24c58bc3f43.1
+[2025-11-30 22:48:11Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-11-30 22:48:11Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:12Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-11-30 22:48:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:13Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:28Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:29Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:29Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:30Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:31Z INFO JobServerQueue] Try to append 2 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 2/2.
+[2025-11-30 22:48:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:35Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:35Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:35Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:36Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:41Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:41Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:41Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] Finished process 21960 with exit code 0, and elapsed time 00:00:30.1619490.
+[2025-11-30 22:48:41Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_runner_file_commands\step_summary_31c992e0-b5b5-4c43-8944-c297c787d8d8) is empty; skipping attachment upload
+[2025-11-30 22:48:41Z INFO StepsRunner] Step result: 
+[2025-11-30 22:48:41Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "e69ae867-9391-43e2-bf02-7f137c5ca388",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [
+    "no submodule mapping found in .gitmodules for path 'actions-runner/_work/sistema-papelaria/sistema-papelaria'",
+    "Unable to clean or reset the repository. The repository will be recreated instead."
+  ],
+  "executionTimeInSeconds": 31,
+  "startTime": "2025-11-30T22:48:11.5890219Z",
+  "finishTime": "2025-11-30T22:48:41.8184539Z"
+}.
+[2025-11-30 22:48:41Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e69ae867-9391-43e2-bf02-7f137c5ca388', success rate: 1/1.
+[2025-11-30 22:48:41Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-11-30 22:48:41Z INFO StepsRunner] Current state: job state = ''
+[2025-11-30 22:48:41Z INFO StepsRunner] Processing step: DisplayName='Setup Node.js'
+[2025-11-30 22:48:41Z INFO StepsRunner] Evaluating: success()
+[2025-11-30 22:48:41Z INFO StepsRunner] Result: true
+[2025-11-30 22:48:41Z INFO StepsRunner] Starting the step.
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:41Z INFO StepsRunner] Which2: 'chcp'
+[2025-11-30 22:48:41Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] Process started with process id 22120, waiting for process exit.
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] Finished process 22120 with exit code 0, and elapsed time 00:00:00.0110348.
+[2025-11-30 22:48:41Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:41Z INFO ActionManager] Load action that reference repository from 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\actions\setup-node\v3'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Ignore action property author.
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "node-version-file"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 23,
+          "col": 14,
+          "expr": "github.server_url == 'https://github.com' && github.token || ''"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 24,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 26,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-11-30 22:48:41Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-11-30 22:48:41Z INFO ActionManager] Action node.js file: dist/setup/index.js.
+[2025-11-30 22:48:41Z INFO ActionManager] Action post node.js file: dist/cache-save/index.js.
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:41Z INFO ExecutionContext] Write event payload to C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:41Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Input 'always-auth': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 7,
+  "col": 14,
+  "lit": "false"
+}
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Input 'node-version-file': default value evaluate result: ""
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Input 'architecture': default value evaluate result: ""
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Input 'check-latest': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 16,
+  "col": 14,
+  "lit": "false"
+}
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Input 'registry-url': default value evaluate result: ""
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Input 'scope': default value evaluate result: ""
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 23,
+  "col": 14,
+  "lit": "***"
+}
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Input 'cache': default value evaluate result: ""
+[2025-11-30 22:48:41Z INFO ActionManifestManager] Input 'cache-dependency-path': default value evaluate result: ""
+[2025-11-30 22:48:41Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command error
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command group
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-11-30 22:48:41Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:41Z INFO HostContext] Well known directory 'Externals': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals\node20\bin\node.exe'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\actions\setup-node\v3\dist/setup/index.js"'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\sistema-papelaria\sistema-papelaria'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:41Z INFO ProcessInvokerWrapper] Process started with process id 10100, waiting for process exit.
+[2025-11-30 22:48:42Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-11-30 22:48:42Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\blocks\984ccd4b-966f-4dd5-a642-6a75d469f53a_e69ae867-9391-43e2-bf02-7f137c5ca388.1
+[2025-11-30 22:48:42Z INFO JobServerQueue] Try to append 1 batches web console lines for record '573b2d36-9d05-4d91-b9e4-a01840cc6f41', success rate: 1/1.
+[2025-11-30 22:48:42Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-11-30 22:48:42Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-11-30 22:48:42Z INFO JobServerQueue] Try to append 1 batches web console lines for record '573b2d36-9d05-4d91-b9e4-a01840cc6f41', success rate: 1/1.
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper] Finished process 10100 with exit code 0, and elapsed time 00:00:01.1355047.
+[2025-11-30 22:48:42Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_runner_file_commands\step_summary_b77f71f0-7052-4a53-8fe2-9ec1689d8f72) is empty; skipping attachment upload
+[2025-11-30 22:48:42Z INFO StepsRunner] Step result: 
+[2025-11-30 22:48:42Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/setup-node",
+  "ref": "v3",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "573b2d36-9d05-4d91-b9e4-a01840cc6f41",
+  "stepContextName": "__actions_setup-node",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 2,
+  "startTime": "2025-11-30T22:48:41.8233923Z",
+  "finishTime": "2025-11-30T22:48:42.9856719Z"
+}.
+[2025-11-30 22:48:42Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-11-30 22:48:42Z INFO StepsRunner] Current state: job state = ''
+[2025-11-30 22:48:42Z INFO StepsRunner] Processing step: DisplayName='Instalar Dependências'
+[2025-11-30 22:48:42Z INFO StepsRunner] Evaluating: success()
+[2025-11-30 22:48:42Z INFO StepsRunner] Result: true
+[2025-11-30 22:48:42Z INFO StepsRunner] Starting the step.
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:42Z INFO StepsRunner] Which2: 'chcp'
+[2025-11-30 22:48:42Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper] Process started with process id 26040, waiting for process exit.
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:42Z INFO ProcessInvokerWrapper] Finished process 26040 with exit code 0, and elapsed time 00:00:00.0077815.
+[2025-11-30 22:48:42Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:42Z INFO ExecutionContext] Write event payload to C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:42Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:42Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-11-30 22:48:42Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command error
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command group
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-11-30 22:48:42Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-11-30 22:48:43Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-11-30 22:48:43Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-11-30 22:48:43Z INFO ScriptHandler] Defaulting to powershell
+[2025-11-30 22:48:43Z INFO ScriptHandler] Which2: 'powershell'
+[2025-11-30 22:48:43Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-11-30 22:48:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:43Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:43Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-11-30 22:48:43Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-11-30 22:48:43Z INFO ScriptHandler] Defaulting to powershell
+[2025-11-30 22:48:43Z INFO ScriptHandler] Which2: 'powershell'
+[2025-11-30 22:48:43Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\fad89acb-425f-4495-a318-4bb5d2fc4d39.ps1'"'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\sistema-papelaria\sistema-papelaria'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:43Z INFO ProcessInvokerWrapper] Process started with process id 26472, waiting for process exit.
+[2025-11-30 22:48:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record '573b2d36-9d05-4d91-b9e4-a01840cc6f41', success rate: 1/1.
+[2025-11-30 22:48:43Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-11-30 22:48:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8cf8b9a3-f816-4f71-8f6b-812d1bfa1c0a', success rate: 1/1.
+[2025-11-30 22:48:43Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-11-30 22:48:43Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\blocks\984ccd4b-966f-4dd5-a642-6a75d469f53a_573b2d36-9d05-4d91-b9e4-a01840cc6f41.1
+[2025-11-30 22:48:44Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-11-30 22:48:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8cf8b9a3-f816-4f71-8f6b-812d1bfa1c0a', success rate: 1/1.
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] Finished process 26472 with exit code 0, and elapsed time 00:00:02.7214628.
+[2025-11-30 22:48:45Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_runner_file_commands\step_summary_8ef0dec9-c7b9-42cf-b5c6-8f177b0c7578) is empty; skipping attachment upload
+[2025-11-30 22:48:45Z INFO StepsRunner] Step result: 
+[2025-11-30 22:48:45Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "8cf8b9a3-f816-4f71-8f6b-812d1bfa1c0a",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 3,
+  "startTime": "2025-11-30T22:48:42.9863591Z",
+  "finishTime": "2025-11-30T22:48:45.7369449Z"
+}.
+[2025-11-30 22:48:45Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-11-30 22:48:45Z INFO StepsRunner] Current state: job state = ''
+[2025-11-30 22:48:45Z INFO StepsRunner] Processing step: DisplayName='Executar Testes Unitários (Jest)'
+[2025-11-30 22:48:45Z INFO StepsRunner] Evaluating: success()
+[2025-11-30 22:48:45Z INFO StepsRunner] Result: true
+[2025-11-30 22:48:45Z INFO StepsRunner] Starting the step.
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:45Z INFO StepsRunner] Which2: 'chcp'
+[2025-11-30 22:48:45Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] Process started with process id 12848, waiting for process exit.
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] Finished process 12848 with exit code 0, and elapsed time 00:00:00.0075459.
+[2025-11-30 22:48:45Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:45Z INFO ExecutionContext] Write event payload to C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:45Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-11-30 22:48:45Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command error
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command group
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-11-30 22:48:45Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-11-30 22:48:45Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-11-30 22:48:45Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-11-30 22:48:45Z INFO ScriptHandler] Defaulting to powershell
+[2025-11-30 22:48:45Z INFO ScriptHandler] Which2: 'powershell'
+[2025-11-30 22:48:45Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:45Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:45Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-11-30 22:48:45Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-11-30 22:48:45Z INFO ScriptHandler] Defaulting to powershell
+[2025-11-30 22:48:45Z INFO ScriptHandler] Which2: 'powershell'
+[2025-11-30 22:48:45Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\e17c8b64-9a30-4c47-9f66-cd90b0ddc1c8.ps1'"'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\sistema-papelaria\sistema-papelaria'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:45Z INFO ProcessInvokerWrapper] Process started with process id 23164, waiting for process exit.
+[2025-11-30 22:48:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f4fe59fe-c246-4702-9dd9-7c55d45f149d', success rate: 1/1.
+[2025-11-30 22:48:46Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-11-30 22:48:46Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-11-30 22:48:46Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\blocks\984ccd4b-966f-4dd5-a642-6a75d469f53a_8cf8b9a3-f816-4f71-8f6b-812d1bfa1c0a.1
+[2025-11-30 22:48:46Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f4fe59fe-c246-4702-9dd9-7c55d45f149d', success rate: 1/1.
+[2025-11-30 22:48:46Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-11-30 22:48:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:55Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f4fe59fe-c246-4702-9dd9-7c55d45f149d', success rate: 1/1.
+[2025-11-30 22:48:56Z INFO JobServerQueue] Try to append 6 batches web console lines for record 'f4fe59fe-c246-4702-9dd9-7c55d45f149d', success rate: 6/6.
+[2025-11-30 22:48:56Z INFO JobServerQueue] Try to append 6 batches web console lines for record 'f4fe59fe-c246-4702-9dd9-7c55d45f149d', success rate: 6/6.
+[2025-11-30 22:48:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f4fe59fe-c246-4702-9dd9-7c55d45f149d', success rate: 1/1.
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] Finished process 23164 with exit code 1, and elapsed time 00:00:11.2659244.
+[2025-11-30 22:48:57Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_runner_file_commands\step_summary_266de28f-fcbd-4ecc-ba4c-b8e2ada54553) is empty; skipping attachment upload
+[2025-11-30 22:48:57Z INFO StepsRunner] Step result: Failed
+[2025-11-30 22:48:57Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "f4fe59fe-c246-4702-9dd9-7c55d45f149d",
+  "stepContextName": "__run_2",
+  "result": "failed",
+  "errorMessages": [
+    "Process completed with exit code 1."
+  ],
+  "executionTimeInSeconds": 12,
+  "startTime": "2025-11-30T22:48:45.7377033Z",
+  "finishTime": "2025-11-30T22:48:57.0294294Z"
+}.
+[2025-11-30 22:48:57Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2025-11-30 22:48:57Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-11-30 22:48:57Z INFO StepsRunner] Processing step: DisplayName='Analisar Qualidade (SonarQube)'
+[2025-11-30 22:48:57Z INFO StepsRunner] Evaluating: success()
+[2025-11-30 22:48:57Z INFO StepsRunner] Result: false
+[2025-11-30 22:48:57Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-11-30 22:48:57Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-11-30 22:48:57Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-11-30 22:48:57Z INFO StepsRunner] Processing step: DisplayName='Instalar Dependência do Gemini'
+[2025-11-30 22:48:57Z INFO StepsRunner] Evaluating: success()
+[2025-11-30 22:48:57Z INFO StepsRunner] Result: false
+[2025-11-30 22:48:57Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-11-30 22:48:57Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-11-30 22:48:57Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-11-30 22:48:57Z INFO StepsRunner] Processing step: DisplayName='Consultoria de IA (Gemini)'
+[2025-11-30 22:48:57Z INFO StepsRunner] Evaluating: success()
+[2025-11-30 22:48:57Z INFO StepsRunner] Result: false
+[2025-11-30 22:48:57Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-11-30 22:48:57Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-11-30 22:48:57Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-11-30 22:48:57Z INFO StepsRunner] Processing step: DisplayName='Post Setup Node.js'
+[2025-11-30 22:48:57Z INFO StepsRunner] Evaluating: success()
+[2025-11-30 22:48:57Z INFO StepsRunner] Result: false
+[2025-11-30 22:48:57Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-11-30 22:48:57Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-11-30 22:48:57Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-11-30 22:48:57Z INFO StepsRunner] Processing step: DisplayName='Post Checkout do Código'
+[2025-11-30 22:48:57Z INFO StepsRunner] Evaluating: always()
+[2025-11-30 22:48:57Z INFO StepsRunner] Result: true
+[2025-11-30 22:48:57Z INFO StepsRunner] Starting the step.
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:57Z INFO StepsRunner] Which2: 'chcp'
+[2025-11-30 22:48:57Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] Process started with process id 2152, waiting for process exit.
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] Finished process 2152 with exit code 0, and elapsed time 00:00:00.0084934.
+[2025-11-30 22:48:57Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:57Z INFO ActionManager] Load action that reference repository from 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\actions\checkout\v3'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Actions': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions'
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-11-30 22:48:57Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-11-30 22:48:57Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-11-30 22:48:57Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:57Z INFO ExecutionContext] Write event payload to C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Temp': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp'
+[2025-11-30 22:48:57Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "brenoveroneze/sistema-papelaria"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "false"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "false"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "true"
+}
+[2025-11-30 22:48:57Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-11-30 22:48:57Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command error
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command group
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-11-30 22:48:57Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Externals': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] Starting process:
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals\node20\bin\node.exe'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\sistema-papelaria\sistema-papelaria'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] Process started with process id 3332, waiting for process exit.
+[2025-11-30 22:48:57Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-11-30 22:48:57Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2025-11-30 22:48:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f4fe59fe-c246-4702-9dd9-7c55d45f149d', success rate: 1/1.
+[2025-11-30 22:48:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'feadfbd1-162f-4fc6-87c8-1b472a041831', success rate: 1/1.
+[2025-11-30 22:48:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'feadfbd1-162f-4fc6-87c8-1b472a041831', success rate: 1/1.
+[2025-11-30 22:48:57Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-11-30 22:48:57Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\blocks\984ccd4b-966f-4dd5-a642-6a75d469f53a_f4fe59fe-c246-4702-9dd9-7c55d45f149d.1
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-11-30 22:48:57Z INFO ProcessInvokerWrapper] Finished process 3332 with exit code 0, and elapsed time 00:00:00.7166778.
+[2025-11-30 22:48:57Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp\_runner_file_commands\step_summary_cbd969b4-421e-4a8c-9bc9-4bc90a57d8a1) is empty; skipping attachment upload
+[2025-11-30 22:48:57Z INFO StepsRunner] Step result: 
+[2025-11-30 22:48:57Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node20",
+  "stage": "Post",
+  "stepId": "feadfbd1-162f-4fc6-87c8-1b472a041831",
+  "result": "succeeded",
+  "errorMessages": [
+    "The process 'C:\\Program Files\\Git\\cmd\\git.exe' failed with exit code 128"
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-11-30T22:48:57.0316288Z",
+  "finishTime": "2025-11-30T22:48:57.7663423Z"
+}.
+[2025-11-30 22:48:57Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-11-30 22:48:57Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-11-30 22:48:57Z INFO JobRunner] Finalize job.
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:48:57Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:48:57Z INFO JobExtension] Initialize Env context
+[2025-11-30 22:48:57Z INFO JobExtension] Initialize steps context
+[2025-11-30 22:48:57Z INFO JobExtension] Total accessible running process: 303.
+[2025-11-30 22:48:57Z INFO JobExtension] Inspecting process environment variables. PID: 6608 (SearchProtocolHost)
+[2025-11-30 22:48:57Z INFO JobExtension] Inspecting process environment variables. PID: 9572 (WmiPrvSE)
+[2025-11-30 22:48:57Z WARN JobExtension] Ignore exception during read process environment variables: Acesso negado.
+[2025-11-30 22:48:57Z INFO JobExtension] Inspecting process environment variables. PID: 16896 (msedge)
+[2025-11-30 22:48:57Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "0255d448-cb0f-4420-a055-8a69d1dba2b5",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-11-30T22:48:57.7703061Z",
+  "finishTime": "2025-11-30T22:48:57.7897676Z"
+}.
+[2025-11-30 22:48:57Z INFO JobRunner] Job result after all job steps finish: Failed
+[2025-11-30 22:48:57Z INFO JobRunner] Completing the job execution context.
+[2025-11-30 22:48:57Z INFO JobRunner] Shutting down the job server queue.
+[2025-11-30 22:48:57Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2025-11-30 22:48:58Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-11-30 22:48:59Z INFO JobServerQueue] All queue process task stopped.
+[2025-11-30 22:48:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'feadfbd1-162f-4fc6-87c8-1b472a041831', success rate: 1/1.
+[2025-11-30 22:48:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0255d448-cb0f-4420-a055-8a69d1dba2b5', success rate: 1/1.
+[2025-11-30 22:48:59Z INFO JobServerQueue] Web console line queue drained.
+[2025-11-30 22:48:59Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2025-11-30 22:48:59Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2025-11-30 22:48:59Z INFO JobServerQueue] File upload queue drained.
+[2025-11-30 22:48:59Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-11-30 22:48:59Z INFO JobServerQueue] Uploading 3 file(s) in one shot through results service.
+[2025-11-30 22:48:59Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-11-30 22:48:59Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\blocks\984ccd4b-966f-4dd5-a642-6a75d469f53a_feadfbd1-162f-4fc6-87c8-1b472a041831.1
+[2025-11-30 22:48:59Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-11-30 22:48:59Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\blocks\984ccd4b-966f-4dd5-a642-6a75d469f53a_0255d448-cb0f-4420-a055-8a69d1dba2b5.1
+[2025-11-30 22:49:00Z INFO JobServerQueue] Got a job log file to send to results service.
+[2025-11-30 22:49:00Z INFO JobServerQueue] Starting upload of job log file to results service ResultsLog, C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\blocks\984ccd4b-966f-4dd5-a642-6a75d469f53a_0c6e07b7-22af-5116-96c8-431b8da40a03.1
+[2025-11-30 22:49:00Z INFO JobServerQueue] Tried to upload 3 file(s) to results, success rate: 3/3.
+[2025-11-30 22:49:00Z INFO JobServerQueue] Results upload queue drained.
+[2025-11-30 22:49:00Z INFO JobServerQueue] Timeline update queue drained.
+[2025-11-30 22:49:00Z INFO JobServerQueue] Disposing job server ...
+[2025-11-30 22:49:00Z INFO JobServerQueue] Disposing results server ...
+[2025-11-30 22:49:00Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2025-11-30 22:49:00Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_work\_temp
+[2025-11-30 22:49:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin'
+[2025-11-30 22:49:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner'
+[2025-11-30 22:49:00Z INFO HostContext] Well known directory 'Diag': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag'
+[2025-11-30 22:49:00Z INFO HostContext] Well known config file 'Telemetry': 'C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\.telemetry'
+[2025-11-30 22:49:00Z INFO JobRunner] Raising job completed against run service
+[2025-11-30 22:49:01Z INFO Worker] Job completed.
