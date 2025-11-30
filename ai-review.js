@@ -27,7 +27,7 @@ async function runReview() {
     const genAI = new GoogleGenerativeAI(API_KEY);
     
     // USANDO GEMINI-PRO: É o modelo mais estável para evitar erro 404
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const prompt = `
       Você é um Tech Lead avaliando um código de TCC.
