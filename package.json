@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest --coverage",
     "lint": "eslint .",
-    "sonar": "node sonar-scan.js"
+    "sonar": "node sonar-scan.js",
+    "full-check": "npm test && npm run sonar"
   },
   "keywords": [],
   "author": "",
