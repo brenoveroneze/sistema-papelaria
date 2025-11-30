@@ -1,4 +1,5 @@
 const scanner = require('sonarqube-scanner');
+require('dotenv').config();
 
 scanner.scan(
   {
