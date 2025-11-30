@@ -31,3 +31,13 @@ jobs:
           SONAR_LOGIN: ${{ secrets.SONAR_LOGIN }}
           SONAR_PASSWORD: ${{ secrets.SONAR_PASSWORD }}
         run: npm run sonar -- -Dsonar.qualitygate.wait=true
+
+# AI Code Review
+      - name: Instalar Dependência do Gemini
+        run: npm install dotenv 
+
+      - name: Consultoria de IA (Gemini)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node ai-review.js
+        continue-on-error: true

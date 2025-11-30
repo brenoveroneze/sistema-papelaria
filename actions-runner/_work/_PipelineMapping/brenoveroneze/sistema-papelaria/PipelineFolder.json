@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "brenoveroneze/sistema-papelaria",
+  "pipelineDirectory": "sistema-papelaria",
+  "workspaceDirectory": "sistema-papelaria\\sistema-papelaria",
+  "repositories": {
+    "brenoveroneze/sistema-papelaria": {
+      "repositoryPath": "sistema-papelaria\\sistema-papelaria",
+      "lastRunOn": "11/30/2025 19:24:06 -03:00"
+    }
+  },
+  "lastRunOn": "11/30/2025 19:27:58 -03:00"
+}
