@@ -1,18 +1,16 @@
 const fs = require('fs');
 require('dotenv').config();
 
-// Configurações
-const HF_TOKEN = process.env.HF_TOKEN;
-// Modelo focado em código (Open Source e Gratuito na API de inferência)
-// Substitua a linha do MODEL_URL por esta:
-const MODEL_URL = "https://api-inference.huggingface.co/models/google/gemma-2-2b-it";
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
+// Usando Llama 3 (Versão 8B) - Rápido, inteligente e gratuito na Groq
+const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const FILE_TO_REVIEW = './src/services/StockService.js';
 
 async function runReview() {
-  console.log("--- INICIANDO DIAGNÓSTICO IA (VIA HUGGING FACE) ---");
+  console.log("--- INICIANDO DIAGNÓSTICO IA (VIA GROQ/LLAMA3) ---");
 
-  if (!HF_TOKEN) {
-    console.error("❌ ERRO: A variável HF_TOKEN está vazia.");
+  if (!GROQ_API_KEY) {
+    console.error("❌ ERRO: A variável GROQ_API_KEY está vazia.");
     process.exit(1);
   }
 
@@ -23,58 +21,48 @@ async function runReview() {
 
   const codeContent = fs.readFileSync(FILE_TO_REVIEW, 'utf8');
 
-  // Prompt formatado para o modelo
   const prompt = `
-    Aja como um Tech Lead Sênior. Analise o código JavaScript abaixo.
-    Identifique problemas de segurança, performance ou boas práticas.
-    Dê 3 sugestões curtas e diretas em formato de lista.
+    Atue como um Arquiteto de Software Especialista.
+    Analise o código abaixo em busca de bugs, falhas de segurança e melhorias de legibilidade.
+    Forneça exatamente 3 recomendações práticas e diretas.
+    Responda em Português do Brasil.
     
     Código:
     ${codeContent}
-    
-    Sugestões:
   `;
 
-  console.log("🤖 Enviando requisição para Hugging Face...");
-
   try {
-    const response = await fetch(MODEL_URL, {
-      headers: {
-        Authorization: `Bearer ${HF_TOKEN}`,
-        "Content-Type": "application/json",
-      },
+    const response = await fetch(API_URL, {
       method: "POST",
+      headers: {
+        "Authorization": `Bearer ${GROQ_API_KEY}`,
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({
-        inputs: prompt,
-        parameters: {
-            max_new_tokens: 500, // Limite da resposta
-            return_full_text: false, // Não repete o prompt na resposta
-            temperature: 0.3 // Criatividade baixa para ser mais técnico
-        }
-      }),
+        messages: [
+            { role: "system", content: "Você é um assistente de Code Review focado em qualidade e segurança." },
+            { role: "user", content: prompt }
+        ],
+        model: "llama3-8b-8192", // Modelo rápido e estável
+        temperature: 0.2 // Baixa criatividade para ser mais técnico
+      })
     });
 
     if (!response.ok) {
-        throw new Error(`Erro HTTP: ${response.status} - ${response.statusText}`);
+        const errText = await response.text();
+        throw new Error(`Erro API Groq (${response.status}): ${errText}`);
     }
 
-    const result = await response.json();
+    const data = await response.json();
+    const feedback = data.choices[0]?.message?.content;
 
-    // Tratamento de erro específico da API gratuita (Modelo carregando)
-    if (result.error && result.error.includes("loading")) {
-        console.warn("⚠️ O modelo está 'frio' (carregando). Tente rodar o pipeline novamente em 30 segundos.");
-        return;
-    }
-
-    console.log("\n=== RELATÓRIO HUGGING FACE ===\n");
-    // A API retorna um array de objetos. Pegamos o texto gerado.
-    const feedback = result[0]?.generated_text || JSON.stringify(result);
+    console.log("\n=== 🚀 RELATÓRIO DE QUALIDADE (GROQ) ===\n");
     console.log(feedback);
-    console.log("\n==============================\n");
+    console.log("\n========================================\n");
 
   } catch (error) {
-    console.error("❌ Falha na comunicação com a API:");
-    console.error(error.message);
+    console.error("❌ Falha crítica na IA:", error.message);
+    process.exit(1);
   }
 }
 

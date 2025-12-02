@@ -33,9 +33,9 @@ jobs:
         run: npm run sonar -- -Dsonar.qualitygate.wait=true
 
       
-      - name: Preparar e Rodar IA (Hugging Face)
+      - name: Preparar e Rodar IA (Groq Cloud)
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }} # <--- Atualize o nome aqui
         run: |
           npm install dotenv
           node ai-review.js
