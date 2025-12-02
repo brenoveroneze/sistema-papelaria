@@ -2,15 +2,14 @@ const fs = require('fs');
 require('dotenv').config();
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
-// Usando Llama 3 (Versão 8B) - Rápido, inteligente e gratuito na Groq
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const FILE_TO_REVIEW = './src/services/StockService.js';
 
 async function runReview() {
-  console.log("--- INICIANDO DIAGNÓSTICO IA (VIA GROQ/LLAMA3) ---");
+  console.log("--- INICIANDO DIAGNÓSTICO IA (VIA GROQ / LLAMA 3.3) ---");
 
   if (!GROQ_API_KEY) {
-    console.error("❌ ERRO: A variável GROQ_API_KEY está vazia.");
+    console.error("❌ ERRO: A variável GROQ_API_KEY está vazia/não definida.");
     process.exit(1);
   }
 
@@ -21,6 +20,7 @@ async function runReview() {
 
   const codeContent = fs.readFileSync(FILE_TO_REVIEW, 'utf8');
 
+  // Prompt ajustado para Code Review
   const prompt = `
     Atue como um Arquiteto de Software Especialista.
     Analise o código abaixo em busca de bugs, falhas de segurança e melhorias de legibilidade.
@@ -40,11 +40,12 @@ async function runReview() {
       },
       body: JSON.stringify({
         messages: [
-            { role: "system", content: "Você é um assistente de Code Review focado em qualidade e segurança." },
+            { role: "system", content: "Você é um assistente de Code Review focado em qualidade." },
             { role: "user", content: prompt }
         ],
-        model: "llama3-8b-8192", // Modelo rápido e estável
-        temperature: 0.2 // Baixa criatividade para ser mais técnico
+        // ATUALIZADO: Modelo novo e estável da Groq
+        model: "llama-3.3-70b-versatile", 
+        temperature: 0.2
       })
     });
 
