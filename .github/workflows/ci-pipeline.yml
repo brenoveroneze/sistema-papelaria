@@ -32,10 +32,9 @@ jobs:
           SONAR_PASSWORD: ${{ secrets.SONAR_PASSWORD }}
         run: npm run sonar -- -Dsonar.qualitygate.wait=true
 
-      
       - name: Preparar e Rodar IA (Groq Cloud)
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }} # <--- Atualize o nome aqui
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           npm install dotenv
           node ai-review.js
