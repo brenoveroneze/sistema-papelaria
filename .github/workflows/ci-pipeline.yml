@@ -32,9 +32,10 @@ jobs:
           SONAR_PASSWORD: ${{ secrets.SONAR_PASSWORD }}
         run: npm run sonar -- -Dsonar.qualitygate.wait=true
 
+      
       - name: Preparar e Rodar IA (Hugging Face)
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }} # <--- MUDANÇA AQUI
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           npm install dotenv
           node ai-review.js

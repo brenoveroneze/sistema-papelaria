@@ -4,7 +4,7 @@ require('dotenv').config();
 // Configurações
 const HF_TOKEN = process.env.HF_TOKEN;
 // Modelo focado em código (Open Source e Gratuito na API de inferência)
-const MODEL_URL = "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-Coder-32B-Instruct"; 
+const MODEL_URL = "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-Coder-1.5B-Instruct"; 
 const FILE_TO_REVIEW = './src/services/StockService.js';
 
 async function runReview() {
