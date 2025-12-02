@@ -1,57 +1,79 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require('fs');
 require('dotenv').config();
 
-// Ordem de prioridade: Variável do Sistema (GitHub Actions) > Arquivo .env
-const API_KEY = process.env.GEMINI_API_KEY;
+// Configurações
+const HF_TOKEN = process.env.HF_TOKEN;
+// Modelo focado em código (Open Source e Gratuito na API de inferência)
+const MODEL_URL = "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-Coder-32B-Instruct"; 
 const FILE_TO_REVIEW = './src/services/StockService.js';
 
 async function runReview() {
-  console.log("--- INICIANDO DIAGNÓSTICO IA ---");
+  console.log("--- INICIANDO DIAGNÓSTICO IA (VIA HUGGING FACE) ---");
 
-  // Debug de Segurança: Mostra se a chave existe sem revelar ela
-  if (!API_KEY) {
-    console.error("❌ ERRO CRÍTICO: A variável GEMINI_API_KEY está VAZIA ou INDEFINIDA.");
-    return;
-  } else {
-    console.log(`✅ API Key detectada (Tamanho: ${API_KEY.length} caracteres)`);
+  if (!HF_TOKEN) {
+    console.error("❌ ERRO: A variável HF_TOKEN está vazia.");
+    process.exit(1);
   }
 
-  try {
-    if (!fs.existsSync(FILE_TO_REVIEW)) {
-      console.log("Arquivo não encontrado para revisão.");
-      return;
-    }
-    const codeContent = fs.readFileSync(FILE_TO_REVIEW, 'utf8');
+  if (!fs.existsSync(FILE_TO_REVIEW)) {
+    console.error(`❌ Arquivo não encontrado: ${FILE_TO_REVIEW}`);
+    return;
+  }
 
-    const genAI = new GoogleGenerativeAI(API_KEY);
+  const codeContent = fs.readFileSync(FILE_TO_REVIEW, 'utf8');
+
+  // Prompt formatado para o modelo
+  const prompt = `
+    Aja como um Tech Lead Sênior. Analise o código JavaScript abaixo.
+    Identifique problemas de segurança, performance ou boas práticas.
+    Dê 3 sugestões curtas e diretas em formato de lista.
     
-    // USANDO GEMINI-PRO: É o modelo mais estável para evitar erro 404
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    Código:
+    ${codeContent}
+    
+    Sugestões:
+  `;
 
-    const prompt = `
-      Você é um Tech Lead avaliando um código de TCC.
-      Analise o código abaixo (StockService.js).
-      Seja curto, direto e educado. Dê 3 sugestões de melhoria.
-      
-      Código:
-      ${codeContent}
-    `;
+  console.log("🤖 Enviando requisição para Hugging Face...");
 
-    console.log("🤖 Enviando para o Google Gemini...");
+  try {
+    const response = await fetch(MODEL_URL, {
+      headers: {
+        Authorization: `Bearer ${HF_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        inputs: prompt,
+        parameters: {
+            max_new_tokens: 500, // Limite da resposta
+            return_full_text: false, // Não repete o prompt na resposta
+            temperature: 0.3 // Criatividade baixa para ser mais técnico
+        }
+      }),
+    });
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
+    if (!response.ok) {
+        throw new Error(`Erro HTTP: ${response.status} - ${response.statusText}`);
+    }
 
-    console.log("\n=== RELATÓRIO GEMINI ===\n");
-    console.log(text);
-    console.log("\n========================\n");
+    const result = await response.json();
+
+    // Tratamento de erro específico da API gratuita (Modelo carregando)
+    if (result.error && result.error.includes("loading")) {
+        console.warn("⚠️ O modelo está 'frio' (carregando). Tente rodar o pipeline novamente em 30 segundos.");
+        return;
+    }
+
+    console.log("\n=== RELATÓRIO HUGGING FACE ===\n");
+    // A API retorna um array de objetos. Pegamos o texto gerado.
+    const feedback = result[0]?.generated_text || JSON.stringify(result);
+    console.log(feedback);
+    console.log("\n==============================\n");
 
   } catch (error) {
-    console.error("❌ Falha na comunicação com a IA:");
-    console.error(error.message); 
-    // Se for erro de permissão, vai aparecer aqui
+    console.error("❌ Falha na comunicação com a API:");
+    console.error(error.message);
   }
 }
 

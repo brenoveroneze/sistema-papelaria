@@ -32,11 +32,10 @@ jobs:
           SONAR_PASSWORD: ${{ secrets.SONAR_PASSWORD }}
         run: npm run sonar -- -Dsonar.qualitygate.wait=true
 
-      - name: Preparar e Rodar IA (Gemini)
+      - name: Preparar e Rodar IA (Hugging Face)
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        # O comando abaixo força a instalação da ÚLTIMA versão da lib
+          HF_TOKEN: ${{ secrets.HF_TOKEN }} # <--- MUDANÇA AQUI
         run: |
-          npm install @google/generative-ai@latest dotenv
+          npm install dotenv
           node ai-review.js
         continue-on-error: true
