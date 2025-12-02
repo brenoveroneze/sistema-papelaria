@@ -6,15 +6,15 @@ const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const FILE_TO_REVIEW = './src/services/StockService.js';
 
 async function runReview() {
-  console.log("--- INICIANDO DIAGNÓSTICO IA (VIA GROQ / LLAMA 3.3) ---");
+  console.log("--- INICIANDO DIAGNÓSTICO IA  ---");
 
   if (!GROQ_API_KEY) {
-    console.error("❌ ERRO: A variável GROQ_API_KEY está vazia/não definida.");
+    console.error("ERRO: A variável GROQ_API_KEY está vazia/não definida.");
     process.exit(1);
   }
 
   if (!fs.existsSync(FILE_TO_REVIEW)) {
-    console.error(`❌ Arquivo não encontrado: ${FILE_TO_REVIEW}`);
+    console.error(`Arquivo não encontrado: ${FILE_TO_REVIEW}`);
     return;
   }
 
@@ -57,12 +57,12 @@ async function runReview() {
     const data = await response.json();
     const feedback = data.choices[0]?.message?.content;
 
-    console.log("\n=== 🚀 RELATÓRIO DE QUALIDADE (GROQ) ===\n");
+    console.log("\n=== RELATÓRIO DE QUALIDADE (GROQ) ===\n");
     console.log(feedback);
     console.log("\n========================================\n");
 
   } catch (error) {
-    console.error("❌ Falha crítica na IA:", error.message);
+    console.error(" Falha crítica na IA:", error.message);
     process.exit(1);
   }
 }

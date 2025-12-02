@@ -11,7 +11,6 @@ module.exports = {
     "**/*.test.js"
   ],
 
-  // Removemos 'actions-runner' daqui para não bloquear o projeto todo
   testPathIgnorePatterns: [
     "/node_modules/"
   ],

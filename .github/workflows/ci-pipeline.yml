@@ -1,10 +1,8 @@
 name: TCC Quality Pipeline
 
 on:
-  # Gatilho 1: Roda quando faz push na main
   push:
     branches: [ "main" ]
-  # Gatilho 2: Adiciona um botão "Run Workflow" para você rodar manualmente se quiser
   workflow_dispatch:
 
 jobs:

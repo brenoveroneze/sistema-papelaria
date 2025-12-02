@@ -39,7 +39,7 @@ class ProductRepository {
     });
   }
   
-  // Método auxiliar para testes (Limpar banco)
+
   deleteAll() {
     return new Promise((resolve, reject) => {
       db.run(`DELETE FROM products`, [], (err) => {
