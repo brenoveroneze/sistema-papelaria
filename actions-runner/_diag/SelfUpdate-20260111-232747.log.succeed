@@ -1,0 +1,20 @@
+[11/01/2026 20:27:47,13] --------whoami-------- 
+desktop-oc83oib\breno
+[11/01/2026 20:27:47,16] --------whoami-------- 
+[11/01/2026 20:27:47,16] Waiting for Runner.Listener.exe (4308) to complete 
+Runner.Listener.exe           4308 Console                    5     85.860 K
+[11/01/2026 20:27:47,27] Process 4308 still running, check again after 1 second. 
+[11/01/2026 20:27:48,39] Process 4308 finished running 
+[11/01/2026 20:27:48,39] Sleep 1 more second to make sure process exited 
+[11/01/2026 20:27:49,43] Re-organize folders 
+[11/01/2026 20:27:49,45] move "C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin" "C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin.2.329.0" 
+        1 dir(s) movido(s).
+[11/01/2026 20:27:49,48] move "C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals" "C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals.2.329.0" 
+        1 dir(s) movido(s).
+[11/01/2026 20:27:49,49] Create junction bin folder 
+Jun‡Æo criada para C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin <<===>> C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\bin.2.330.0
+[11/01/2026 20:27:49,51] Create junction externals folder 
+Jun‡Æo criada para C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals <<===>> C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\externals.2.330.0
+[11/01/2026 20:27:49,52] Update succeed 
+[11/01/2026 20:27:49,53] update.finished file creation succeed 
+[11/01/2026 20:27:49,54] Rename "C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\SelfUpdate-20260111-232747.log" to be "C:\Users\Usuario\Desktop\papelaria-crud-tcc\actions-runner\_diag\SelfUpdate-20260111-232747.log.succeed" 
