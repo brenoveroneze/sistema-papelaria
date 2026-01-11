@@ -1,10 +1,10 @@
 ﻿{
-  "agentId": 22,
-  "agentName": "papelaria-runner",
+  "agentId": 23,
+  "agentName": "runner-tcc",
   "poolId": 1,
   "poolName": "Default",
   "serverUrl": "https://pipelinesghubeus4.actions.githubusercontent.com/qegPUPmeLhp26835BeH2fAE177RMxEkizJV2z1gXKTxFyi3lvN/",
-  "gitHubUrl": "https://github.com/brenoveroneze/reservas-api",
+  "gitHubUrl": "https://github.com/brenoveroneze/sistema-papelaria",
   "workFolder": "_work",
   "useV2Flow": true,
   "serverUrlV2": "https://broker.actions.githubusercontent.com/"

@@ -45,4 +45,10 @@ describe('StockService - Papelaria', () => {
     expect(sale.status).toBe("BAIXO");
   });
 
-})
+  it('Deve bloquear venda se não houver estoque suficiente', async () => {
+    const p = await StockService.createProduct({ name: "Borracha", price: 0.50, quantity: 5, min_quantity: 2 });
+    
+    await expect(StockService.sellProduct(p.id, 10))
+      .rejects.toThrow("Estoque insuficiente");
+  });
+});
