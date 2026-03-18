@@ -1,20 +1,29 @@
-const StockService = require('../src/services/StockService');
-const ProductRepository = require('../src/repositories/ProductRepository');
-const crypto = require('crypto');
-const fs = require('fs').promises;
+jest.mock('../src/database/db', () => ({
+    // Retornamos um objeto vazio ou com funções falsas para isolar o banco
+    run: jest.fn(),
+    all: jest.fn(),
+    get: jest.fn()
+}));
 
-// Mockando as dependências externas usando os caminhos corretos da pasta src
 jest.mock('../src/repositories/ProductRepository');
+
 jest.mock('fs', () => ({
     promises: {
         readFile: jest.fn()
     }
 }));
 
+// 2. IMPORTS VÊM DEPOIS!
+// Agora é seguro importar os serviços, pois as dependências já estão mockadas.
+const StockService = require('../src/services/StockService');
+const ProductRepository = require('../src/repositories/ProductRepository');
+const crypto = require('crypto');
+const fs = require('fs').promises;
+
 describe('StockService', () => {
     
     beforeEach(() => {
-        jest.clearAllMocks(); // Limpa o histórico dos mocks entre os testes
+        jest.clearAllMocks(); 
     });
 
     describe('findProductSafe', () => {
