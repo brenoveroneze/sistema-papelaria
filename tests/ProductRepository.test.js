@@ -17,10 +17,10 @@ describe('ProductRepository', () => {
     it('deve inserir um produto com sucesso', async () => {
       const mockProduct = { name: 'Caderno', price: 15.0, quantity: 20, min_quantity: 5, category: 'Papelaria' };
       
-      // Simulando o comportamento de sucesso do db.run
-      db.run.mockImplementation(function(sql, params, callback) {
-        this.lastID = 1; // Simula o ID gerado pelo banco
-        callback(null);
+      // CORREÇÃO: Usamos o .call() para injetar o contexto do 'this' com o lastID esperado pelo sqlite3
+      db.run.mockImplementation((sql, params, callback) => {
+        const mockContext = { lastID: 1 };
+        callback.call(mockContext, null); 
       });
 
       const result = await ProductRepository.create(mockProduct);
