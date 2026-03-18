@@ -1,55 +1,55 @@
 const ProductRepository = require('../repositories/ProductRepository');
-const { exec } = require('child_process'); // Importação perigosa para o Sonar
 const crypto = require('crypto');
+const fs = require('fs').promises;
+const path = require('path');
 
 class StockService {
   
   constructor() {
-    // VULNERABILIDADE 1: Credenciais Hardcoded (Hardcoded Credentials)
-    // O Sonar detecta padrões de tokens e senhas fixas no código.
-    this.dbPassword = "admin123";
-    this.awsToken = "AKIA1234567890123456"; 
+
+    this.dbPassword = process.env.DB_PASSWORD || "";
+    this.awsToken = process.env.AWS_TOKEN || ""; 
   }
 
   /**
-   * Método inseguro de busca
+   * Método seguro de busca
    */
-  async findProductUnsafe(userInput) {
-    // VULNERABILIDADE 2: Injeção de SQL (SQL Injection)
-    // Concatenar strings em queries é o pecado capital da segurança.
-    // Mesmo sem um banco real conectado, o Sonar detecta o padrão da string SQL.
-    const query = "SELECT * FROM products WHERE name = '" + userInput + "'";
-    console.log("Executando query: " + query); 
+  async findProductSafe(userInput) {
 
-    return await ProductRepository.queryRaw(query);
+    if (!userInput || typeof userInput !== 'string') {
+        throw new Error("Input inválido");
+    }
+    
+    console.log(`Buscando produto pelo nome: ${userInput}`); 
+    return await ProductRepository.findByName(userInput);
   }
 
   /**
-   * Método para gerar relatórios do sistema
+   * Método para gerar relatórios do sistema (Corrigido)
    */
   async generateSystemReport(fileName) {
-    // VULNERABILIDADE 3: Injeção de Comando (OS Command Injection)
-    // Passar input de usuário direto para o shell do sistema operacional.
-    // Isso permite que um hacker execute 'rm -rf /' se passar o nome certo.
-    exec("cat " + fileName, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-    });
+
+    const safeFileName = path.basename(fileName);
+    const safePath = path.join(__dirname, '../reports', safeFileName);
+
+    try {
+        const data = await fs.readFile(safePath, 'utf8');
+        console.log(`Relatório lido com sucesso.`);
+        return data;
+    } catch (error) {
+        console.error(`Erro ao ler o relatório: ${error.message}`);
+        throw error;
+    }
   }
 
   /**
-   * Criptografia fraca
+   * Criptografia forte
    */
   hashData(data) {
-    // VULNERABILIDADE 4: Algoritmo de Hashing Fraco
-    // MD5 e SHA1 são considerados quebrados/inseguros. O Sonar exige SHA-256 ou superior.
-    return crypto.createHash('md5').update(data).digest("hex");
+  
+    return crypto.createHash('sha256').update(data).digest("hex");
   }
 
-  // Lógica original (quebrada para manter baixa cobertura)
   async createProduct(data) {
     if (!data.name) return null;
     return await ProductRepository.create(data);

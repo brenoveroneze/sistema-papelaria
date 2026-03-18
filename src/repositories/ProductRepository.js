@@ -21,6 +21,17 @@ class ProductRepository {
     });
   }
 
+  findByName(name) {
+    return new Promise((resolve, reject) => {
+      // Query parametrizada: o valor substitui o '?' de forma segura,
+      // escapando os caracteres especiais automaticamente.
+      db.all(`SELECT * FROM products WHERE name = ?`, [name], (err, rows) => {
+        if (err) return reject(err);
+        resolve(rows);
+      });
+    });
+  }
+
   updateQuantity(id, newQuantity) {
     return new Promise((resolve, reject) => {
       db.run(`UPDATE products SET quantity = ? WHERE id = ?`, [newQuantity, id], (err) => {
