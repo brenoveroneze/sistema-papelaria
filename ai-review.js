@@ -24,7 +24,7 @@ async function runReview() {
   const prompt = `
     Atue como um Arquiteto de Software Especialista em qualidade de código.
     Analise o código abaixo com precisão em busca de bugs, falhas de segurança, melhorias de legibilidade e otimização.
-    Caso identifique pontos de melhoria informe, caso entenda que não são necessários ajustes apenas retorno "Código não precisa de ajustes."
+    Caso identifique pontos de melhoria informe, caso entenda que não são necessários ajustes apenas retorno "Código não precisa de ajustes"
 
     Responda em Português do Brasil.
     
