@@ -20,11 +20,11 @@ async function runReview() {
 
   const codeContent = fs.readFileSync(FILE_TO_REVIEW, 'utf8');
 
-  // Prompt ajustado para Code Review
+  // Prompt
   const prompt = `
     Atue como um Arquiteto de Software Especialista em qualidade de código.
     Analise o código abaixo com precisão em busca de bugs, falhas de segurança, melhorias de legibilidade e otimização.
-    Caso identifique pontos de melhoria informe, caso entenda que não são necessários ajustes apenas retorno "Código não precisa de ajustes"
+    Caso identifique pontos de melhoria informe, caso entenda que não são necessários ajustes apenas retorno "Código não precisa de ajustes."
 
     Responda em Português do Brasil.
     
@@ -44,7 +44,7 @@ async function runReview() {
             { role: "system", content: "Você é um assistente de Code Review focado em qualidade." },
             { role: "user", content: prompt }
         ],
-        // ATUALIZADO: Modelo novo e estável da Groq
+        
         model: "llama-3.3-70b-versatile", 
         temperature: 0.2
       })
