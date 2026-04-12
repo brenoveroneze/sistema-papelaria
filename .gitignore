@@ -4,3 +4,4 @@ coverage/
 actions-runner/
 .env
 scan.js
+/coverage
