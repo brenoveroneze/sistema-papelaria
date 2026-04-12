@@ -13,7 +13,7 @@ scanner(
       'sonar.sourceEncoding': 'UTF-8',
       
       // ADICIONE AQUI DENTRO. O Sonar aceita o token no campo "login"
-      'sonar.login': 'sqp_0f90d2377e9a296d0aaba7bbf8f6b6a2fc07031e' 
+      'sonar.login': 'sqa_8c75eae117f8f1cdd88769351e6b8f72bd7defb8' 
     },
   },
   () => {

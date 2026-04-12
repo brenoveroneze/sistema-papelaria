@@ -55,10 +55,21 @@ describe('StockService', () => {
         });
 
         it('deve lançar um erro caso o arquivo não seja encontrado ou não possa ser lido', async () => {
+           
             fs.readFile.mockRejectedValue(new Error('ENOENT: no such file or directory'));
             
+            
+            const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+
+           
             await expect(StockService.generateSystemReport('inexistente.txt'))
                 .rejects.toThrow('ENOENT: no such file or directory');
+
+          
+            expect(consoleSpy).toHaveBeenCalled();
+
+         
+            consoleSpy.mockRestore();
         });
     });
 
