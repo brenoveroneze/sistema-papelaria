@@ -60,7 +60,7 @@ async function runReview() {
 
     console.log("\n=== RELATÓRIO DE QUALIDADE (GROQ) =============\n");
     console.log(feedback);
-    console.log("\n================================================\n");
+    console.log("\n===============================================\n");
 
   } catch (error) {
     console.error(" Falha crítica na IA:", error.message);
