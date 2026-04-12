@@ -58,7 +58,7 @@ async function runReview() {
     const data = await response.json();
     const feedback = data.choices[0]?.message?.content;
 
-    console.log("\n=== RELATÓRIO DE QUALIDADE (GROQ) ==========\n");
+    console.log("\n=== RELATÓRIO DE QUALIDADE (GROQ) ===========\n");
     console.log(feedback);
     console.log("\n=========================================\n");
 
